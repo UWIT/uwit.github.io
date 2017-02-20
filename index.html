@@ -1,217 +1,127 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Cafe </title>
 <meta charset="utf-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
 
 <style>
-/*footer */
-footer{
-background-color: black;
-padding: 50px 50px 50px 80px;
-}
-
-/*navbar text*/
-.h{font-family: "Oswald";
-    font-size: 150%
-  }
-	
-/*Background body */    
-body{
-	background-color:black;
-}
-
-/*Button design*/
-.buttdesign{
-overflow:hidden;
-text-decoration:none!important;
-padding:6px 16px;
-color:#fff;
-background-color: white;
-text-align:center;
-white-space:nowrap}
-.w3-btn:hover{
-box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
-			0 6px 20px 0 rgba(0,0,0,0.19)}
-
-/*Special design for navbar */		
-.effect{
-overflow:hidden;
-text-decoration:none!important;
-color:#fff;
-text-align:center;
-white-space:nowrap}
-.effect:hover{
-box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
-			0 6px 20px 0 rgba(0,0,0,0.19)}
-
-/*Background image design in middle */
-.bgimg-1, .bgimg-2  {
-    background-position: center;
-    background-size: cover;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    min-height: 400px;}
-
-/*Background image one in middle*/
-.bgimg-1 {
-    background-image: url("coffe3.jpg");
-}
-
-/*Background image two in middle*/
-.bgimg-2 {
-    background-image: url("coffe4.jpg");
-}
-
-
-.w3-padding-64{padding-top:64px!important;padding-bottom:64px!important}
-
-/*Text area page content */
-.page {
-    background-color: #f2f4f7;
-    padding: 50px 30px 50px 80px;
-}
-
-/*Slideshow images */
-.mySlides {display: none;
-        background-attachment: fixed
-}
-
-
-/*Color for JS navbar */
-.color-red,.color-hover-red:hover{color:#fff!important;background-color:#963131!important}
-
-
-/* Side navigation */
-.xlarge{font-size:24px!important}
-.sidenav{height:100%;width:100px;background-color:gray;position:fixed!important;z-index:1;overflow:auto}
-.sidenav a{text-decoration:none!important;padding:4px 2px 4px 16px;display:block}
-.sidenav a:hover{background-color:#ccc}
-.sidenav-click{min-width:100%}
-
-/* Keeps navbar on top */
-.top{top:0;position:fixed;width:100%;z-index:1}
-
-/* horizontal navbar */
-.navbar li{float:left}
-.navbar li a,.w3-navbar li .w3-input{display:block;padding:8px 16px}
-.navbar li a:hover{color:#000;background-color:#ccc}
-.navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
-.navbar:hover,
-.navbar:first-child,
-.navbar-click{position:static}
-/*.navbar-click:hover{background-color:#ccc;color:#000}*/
-/*.black,.hover-black:hover{color:#fff!important;background-color:#000!important}*/
 
 </style>
-<body>
 
 <body>
-<!--side navbar -->
-<nav class="sidenav h" style="display:none" id="mySidenav">
-  <a href="javascript:void(0)" class="effect"
-  onclick="click_close()"><button>Close &times;</button></a>
-  <a class="effect" href="#">Link 1</a>
-  <a class="effect" href="#">Link 2</a>
-  <a class="effect" href="#">Link 3</a>
-  <a class="effect" href="#">Link 4</a>
-  <a class="effect" href="#">Link 5</a>
-</nav>
+	<!--side navbar -->
+	<nav class="sidenav h" style="display:none" id="mySidenav">
+	  <a href="javascript:void(0)" class="effect"onclick="click_close()"><button>Close &times;</button></a>
+	  <a class="effect" href="#">Link 1</a>
+	  <a class="effect" href="#">Link 2</a>
+	  <a class="effect" href="#">Link 3</a>
+	  <a class="effect" href="#">Link 4</a>
+	  <a class="effect" href="#">Link 5</a>
+	</nav>
 
-<div id="main">
-<div class="top h"><!--keeps navbar on top -->
+	<div id="main"><!--This is JS for side navigation -->
+	<div class="top h"><!--keeps navbar on top -->
 
-<!--horizontal navbar -->
-<ul class="navbar black" id="myNavbar">
-
-<li><span class="xlarge effect" onclick="click_open()" id="openNav">&#9776;</span></li>
-  <li><a class="effect" href="#">Home</a></li>
-  <li><a class="effect" href="#">Link 1</a></li>
-  <li><a class="effect" href="#">Link 2</a></li>
-
-</ul>
-</div><!--End of top navbar-->
+		<!--horizontal navbar -->
+		<ul class="navbar black" id="myNavbar">
+			<li><span class="xlarge effect" onclick="click_open()" id="openNav">&#9776;</span></li>
+			<li><a class="effect" href="#">Home</a></li>
+			<li><a class="effect" href="#">Link 1</a></li>
+			<li><a class="effect" href="#">Link 2</a></li>
+		</ul>
+	</div><!--End of top navbar-->
 
 <!-- Automatic Slideshow Images -->
-  <div class="mySlides ">
-    <img src="coffe5.jpg" style="width:100%">
-
-</div>
-      
-
+	<!--First slideshow picture -->
+	<div class="mySlides ">
+		<img src="coffe5.jpg" style="width:100%">
+	</div>
+      	
+	<!--Second slideshow picture -->
     <div class="mySlides">
-    <img class="bgimg-1" src="coffe6.jpg" style="width:100%">
-      </div>    
-
-
+		<img class="bgimg-1" src="coffe6.jpg" style="width:100%">
+     </div>    
+	
+	<!--Third slideshow picture -->
     <div class="mySlides">
-    <img class="bgimg-1" src="coffe7.jpg" style="width:100%">
-  </div>
+		<img class="bgimg-1" src="coffe7.jpg" style="width:100%">
+	</div>
 
-<div class="page">
- <h3>Scroll this page to see the effect.</h3>
-  <p>Some text to enable scrolling..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  </div>
+	<!--first page content -->
+	<div class="page">
+		<h3>Scroll this page to see the effect.</h3>
+		<p>Some text to enable scrolling..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+	</div>
   
-  <!--first background image -->
-  <div class="bgimg-1"></div>
-  
-  <div class="page"> 
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  </div>
-  
+	<!--first background image -->
+	<div class="bgimg-1"></div>
+
+	<!--second page content -->
+	<div class="page"> 
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+	</div>
+
   	<!--Second background image -->
     <div class="bgimg-2"></div>
     
-  <div class="page">
- <center><p>Some text some text some text some text..</p></center>
-  <p>Some text some text some text some text..</p>
-  <p>Some text some text some text some text..</p>
-  
-  <!-- iframe of facebook-->
- <iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCafeRio%2F&tabs=timeline&width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
- 
- <!-- iframe of twitter-->
- <a class="twitter-timeline" data-width="340" data-height="500" href="https://twitter.com/caferio">Tweets by caferio</a> <script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	<!--Third page content -->
+	<div class="page">
+		<center><p>Some text some text some text some text..</p></center>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
 
- </div>
-  
- <footer>
-    <button class="buttdesign">  <a href="#"> ↑ To the top</a></button>
-</footer>
-	  
+		<!-- iframe of facebook-->
+		<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCafeRio%2F&tabs=timeline&
+		width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+		width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+		Some text some text some text some text..
+		
+		<!-- iframe of twitter-->
+		<a class="twitter-timeline" data-width="340" data-height="500" href="https://twitter.com/caferio">Tweets by caferio</a>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+
+	<!--Footer end of webpage -->
+	<footer>
+		<button class="buttdesign">  <a href="#"> ↑ To the top</a></button>
+	</footer>
+
 <script>
 // Side navigation
 function click_open() {
