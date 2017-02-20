@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html>
+<title>W3.CSS</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="utf-8"/>
+
+
+
+<style>
+footer{
+background-color: black;
+    padding: 50px 50px 50px 80px;
+
+}
+body{
+	background-color:black;
+}
+
+.buttdesign{
+overflow:hidden;
+text-decoration:none!important;
+padding:6px 16px;
+color:#fff;
+background-color: white;
+text-align:center;
+white-space:nowrap}
+.w3-btn:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
+			0 6px 20px 0 rgba(0,0,0,0.19)}
+
+			
+.w3-btn{
+overflow:hidden;
+text-decoration:none!important;
+color:#fff;
+text-align:center;
+white-space:nowrap}
+.w3-btn:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
+			0 6px 20px 0 rgba(0,0,0,0.19)}
+
+
+.bgimg-1, .bgimg-2, .bgimg-3  {
+    background-position: center;
+    background-size: cover;
+
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    min-height: 400px;}
+
+    .bgimg-1 {
+    background-image: url("coffe3.jpg");
+}
+/* Second image (Portfolio) */
+.bgimg-2 {
+    background-image: url("coffe4.jpg");
+}
+
+/* Third image (Contact) */
+.bgimg-3 {
+    background-image: url("https://cloud.githubusercontent.com/assets/16332983/21303959/e412f472-c576-11e6-8fbb-7fb7c4355d2a.jpg");
+    min-height: 400px;
+}
+.w3-padding-64{padding-top:64px!important;padding-bottom:64px!important}
+
+.kkk {
+    background-color: #f2f4f7;
+    padding: 50px 30px 50px 80px;
+}
+
+.mySlides {display: none;
+        background-attachment: fixed
+}
+
+
+/*Color for JS navbar */
+.w3-red,.w3-hover-red:hover{color:#fff!important;background-color:#963131!important}
+
+
+/* Side navigation */
+.w3-xlarge{font-size:24px!important}
+.w3-sidenav{height:100%;width:100px;background-color:gray;position:fixed!important;z-index:1;overflow:auto}
+.w3-sidenav a{text-decoration:none!important;padding:4px 2px 4px 16px;display:block}
+.w3-sidenav a:hover{background-color:#ccc}
+.w3-sidenav-click{min-width:100%}
+
+/* Keeps navbar on top */
+.w3-top{top:0;position:fixed;width:100%;z-index:1}
+
+/* horizontal navbar */
+.w3-navbar li{float:left}
+.w3-navbar li a,.w3-navbar li .w3-input{display:block;padding:8px 16px}
+.w3-navbar li a:hover{color:#000;background-color:#ccc}
+.w3-navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
+.w3-navbar:hover,
+.w3-navbar:first-child,
+/*.w3-navbar-click:hover{background-color:#ccc;color:#000}*/
+.w3-navbar-click{position:static}
+/*.w3-black,.w3-hover-black:hover{color:#fff!important;background-color:#000!important}*/
+
+</style>
+<body>
+
+<body>
+
+<nav class="w3-sidenav" style="display:none" id="mySidenav">
+  <a href="javascript:void(0)" class="w3-btn"
+  onclick="w3_close()">close &times;</a>
+  <a class="w3-btn" href="#">Link 1</a>
+  <a class="w3-btn" href="#">Link 2</a>
+  <a class="w3-btn" href="#">Link 3</a>
+  <a class="w3-btn" href="#">Link 4</a>
+  <a class="w3-btn" href="#">Link 5</a>
+</nav>
+
+<div id="main">
+<div class="w3-top">
+
+<ul class="w3-navbar w3-black" id="myNavbar">
+
+<li><span class="w3-xlarge w3-btn" onclick="w3_open()" id="openNav">&#9776;</span></li>
+  <li><a class="w3-btn" href="#">Home</a></li>
+  <li><a class="w3-btn" href="#">Link 1</a></li>
+  <li><a class="w3-btn" href="#">Link 2</a></li>
+
+</ul>
+</div><!--End of top navbar-->
+<!-- Automatic Slideshow Images -->
+  <div class="mySlides ">
+    <img src="coffe5.jpg" style="width:100%">
+
+</div>
+      
+
+    <div class="mySlides">
+    <img class="bgimg-1" src="coffe6.jpg" style="width:100%">
+      </div>    
+
+
+    <div class="mySlides">
+    <img class="bgimg-1" src="coffe7.jpg" style="width:100%">
+  </div>
+
+<div class="kkk">
+ <h3>Scroll this page to see the effect.</h3>
+  <p>Some text to enable scrolling..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  </div>
+  <div class="bgimg-1">
+</div>
+  <div class="kkk"> 
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  </div>
+    <div class="bgimg-2">
+</div>
+  <div class="kkk">
+ <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  <p>Some text some text some text some text..</p>
+  </div>
+  
+ <footer>
+    <button class="buttdesign">  <a href="#"> ↑ To the top</a></button>
+</footer>
+	  
+<script>
+// Side navigation
+function w3_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function w3_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "w3-navbar" + " w3-card-2" + " w3-animate-top" + " w3-red";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top w3-red", "");
+    }
+}
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 6000);    
+}
+</script>
+</div><!--End of id="main"-->
+
+</body>
+</html>
