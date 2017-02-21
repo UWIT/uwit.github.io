@@ -5,7 +5,6 @@
 footer{
 background-color: black;
 padding: 50px 50px 50px 80px;
-	width:100%
 }
 
 /*navbar text*/
@@ -16,7 +15,6 @@ padding: 50px 50px 50px 80px;
 /*Background body */    
 body{
 	background-color:green;
-
 }
 
 /*Button design*/
@@ -50,21 +48,16 @@ box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
     background-attachment: fixed;
     background-repeat: no-repeat;
     min-height: 400px;
-	width:100%
 }
 
 /*Background image one in middle*/
 .bgimg-1 {
     background-image: url("images/coffe3.jpg");
-		width:100%
-
 }
 
 /*Background image two in middle*/
 .bgimg-2 {
     background-image: url("images/coffe4.jpg");
-		width:100%
-
 }
 
 
@@ -72,16 +65,11 @@ box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
 .page {
     background-color: #f2f4f7;
     padding: 50px 30px 50px 80px;
-		width:100%
-
-	
 }
 
 /*Slideshow images */
 .mySlides {display: none;
         background-attachment: fixed;
-			width:100%
-
 }
 
 
