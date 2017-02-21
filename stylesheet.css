@@ -15,7 +15,7 @@ padding: 50px 50px 50px 80px;
 	
 /*Background body */    
 body{
-	background-color:red;
+	background-color:green;
 
 }
 
@@ -79,7 +79,7 @@ box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
 
 /*Slideshow images */
 .mySlides {display: none;
-        background-attachment: fixed
+        background-attachment: fixed;
 			width:100%
 
 }
