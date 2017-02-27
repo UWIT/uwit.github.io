@@ -1,0 +1,266 @@
+
+<?php
+// Start the session
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe </title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="coffe2.jpg">
+<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<style>
+	/*Code source- W3school
+ */
+ 
+	
+	
+	
+	
+	/* side bar- left side of all pages */
+	#sidebar {
+				width: 280px;
+				float: right;
+				margin: 0 auto;
+				text-align: center;
+				margin-top:25px;
+	}
+	
+	/* contents located in sidebar*/
+	#sidebarContent {
+					width: 250px;
+					margin: 0 auto;
+					padding: 20px 4px;
+					text-align: center;
+					border: #655629 0px solid;
+					border-radius: 20px;
+					background: #cbd1db;
+					padding-top:20px;
+					margin-top:10px;
+	}
+	
+	
+	#forms {
+			width: 580px;
+			float: left;
+			margin: 0 auto;
+			margin-top:10px;
+			padding: 20px;
+			text-align: left;
+			background: #dadfe8;
+			border: #655629 0px solid;
+			border-radius: 20px;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			position: relative;
+	}
+	
+	
+	
+	
+	/*extra space */
+	.clearfloat {
+				clear: both;
+				height: 0;
+				font-size: 1px;
+				line-height: 0;
+	}	
+	
+
+	/*Button design*/
+.buttdesign{
+overflow:hidden;
+text-decoration:none!important;
+padding:6px 16px;
+color:#fff;
+background-color: black;
+text-align:center;
+white-space:nowrap}
+.buttdesign:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
+			0 6px 20px 0 rgba(0,0,0,0.19)}
+	
+	
+</style>
+
+<body>
+	<!--side navbar -->
+	<nav class="sidenav h" style="display:none" id="mySidenav">
+	  <a href="javascript:void(0)" class="effect"onclick="click_close()"><button>Close &times;</button></a>
+	  <a class="effect" href="#">Link 1</a>
+	  <a class="effect" href="#">Link 2</a>
+	  <a class="effect" href="#">Link 3</a>
+	  <a class="effect" href="#">Link 4</a>
+	  <a class="effect" href="#">Link 5</a>
+	</nav>
+	<div id="main">
+
+	<div class="top h"><!--keeps navbar on top -->
+
+		<!--horizontal navbar -->
+		<ul class="navbar black" id="myNavbar">
+			<li><span class="xlarge effect" onclick="click_open()" id="openNav">&#9776;</span></li>
+			<li><a class="effect" href="index.html">Home</a></li>
+		</ul>
+	</div><!--End of top navbar-->
+
+
+	<!--first background image -->
+	<div class="bgimg-1"></div>
+
+	<!--second page content -->
+
+	<div class="page " ng-app=""> 
+				
+<div id="forms">
+
+	    <br />
+ 	<form method="post" action="online2.php" >
+
+ 
+				Pick up date: 
+				<input type="date" name="date" value="2017-02-28">
+				Pick up time:
+				<input type="time"  name="time" value="09:00">
+
+				
+<br><br>
+				
+				<img src="Burger.png" alt="Burger" height="100" width="100">
+				Burger 8.99
+				<select name="Burger" id="Burger">
+					<option value="0">0 </option>
+					<option value="1">1 </option>
+		    		<option value="2">2</option>
+		    		<option value="3">3</option>
+		    		<option value="4">4</option>
+				</select>
+				
+				<select name="Burgerptn" id="Select" ng-model="burger" >
+					<option value="">Choose </option>
+					<option value="House Burger $9.95">House Burger</option>
+					<option value="Garden Burger $9.95">Garden Burger </option>
+					<option value="American Burger $9.95">American Burger </option>
+				</select>
+
+<br><br>
+				<img src="Gyro.png" alt="Burger" height="100" width="100">
+
+				Gyro 10.99
+				<select name="Gyro" id="Gyro" >
+					<option value="0">0 </option>
+					<option value="1">1 </option>
+		    		<option value="2">2</option>
+		    		<option value="3">3</option>
+		    		<option value="4">4</option>
+				</select>
+				
+				<select name="Gyroptn" id="Select" ng-model="gyro">
+					<option value=""> Choose</option>
+					<option value="Steak Gyro $10.95">Steak Gyro</option>
+					<option value="Chicken Gyro $10.95">Chicken Gyro</option>
+				</select>
+<br><br>
+
+				<img src="Panini.png" alt="Burger" height="100" width="100">
+
+					Panini 10.99
+				<select name="Panini" id="Gyro" >
+					<option value="0">0 </option>
+					<option value="1">1 </option>
+		    		<option value="2">2</option>
+		    		<option value="3">3</option>
+		    		<option value="4">4</option>
+				</select>
+				
+				<select name="Paniniptn" id="Select" ng-model="panini">
+					<option value="">Choose</option>
+					<option value="Tuna Panini $11.95">Tuna Panini</option>
+					<option value="Chicken Panini $11.95">Chicken Panini</option>
+					<option value="Tibbs Panini $11.95">Tibbs Panini</option>
+
+				</select>
+<br><br><br>
+			Who is this item for? 
+			 <input type="text" name="Name" id="Name" placeholder="Name" ng-model="name" /><br><br>
+
+			<center><button class="buttdesign"> Continue</button></h3></center>
+
+		<br />
+		
+
+	</form>
+
+    </div>
+			
+<div id="sidebar">
+		
+			<!-- contents located in sidebar -->
+			<div id="sidebarContent">
+				<aside>
+				
+				Your name: <br>
+				{{name}} <br><br>
+				
+				Your order: <br>
+				{{burger}} <br>{{gyro}} <br> {{panini}} <br>
+
+
+
+			<br><br>
+					
+			
+					</aside>
+			<!-- end sidebarContent -->
+			</div>	
+
+		<!-- end sidebar -->
+		</div>
+		<!--extra spaces -->
+		<br class="clearfloat" />
+		
+		</div>	<!--end of class page -->
+	<!--Footer end of webpage -->
+	<footer>
+	</footer>
+
+<script>
+// Side navigation
+function click_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function click_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "navbar" + " w3-card-2" + " w3-animate-top" + " color-red";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top color-red", "");
+    }
+}
+
+</script>
+
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.8/angular.min.js"></script>
+</div><!--End of id="main"-->
+
+
+</body>
+</html>
