@@ -1,0 +1,229 @@
+
+<?php
+// Start the session
+session_start();
+?>
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe </title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="coffe2.jpg">
+<link rel="stylesheet" href="stylesheet.css">
+
+</head>
+
+<style>
+/*Background image one in middle*/
+.bgimg-1 {
+    background-image: url("coffe3.jpg");
+}
+
+	
+	/* side bar- left side of all pages */
+	#sidebar {
+				width: 280px;
+				float: right;
+				margin: 0 auto;
+				text-align: center;
+				margin-top:25px;
+	}
+	
+	/* contents located in sidebar*/
+	#sidebarContent {
+					width: 250px;
+					margin: 0 auto;
+					padding: 20px 4px;
+					text-align: center;
+					border: #655629 2px solid;
+					border-radius: 20px;
+					background: #bec6bc;
+					padding-top:20px;
+					margin-top:10px;
+	}
+	
+	
+	#forms {
+			width: 580px;
+			float: left;
+			margin: 0 auto;
+			margin-top:10px;
+			padding: 20px;
+			text-align: left;
+			background: #dadfe8;
+			border: #655629 2px solid;
+			border-radius: 20px;
+			border-top-right-radius: 20px;
+			border-top-left-radius: 20px;
+			border-bottom-right-radius: 20px;
+			border-bottom-left-radius: 20px;
+			position: relative;
+	}
+	
+	
+	
+	
+	/*extra space */
+	.clearfloat {
+				clear: both;
+				height: 0;
+				font-size: 1px;
+				line-height: 0;
+	}	
+	
+
+	
+	
+	/*Button design*/
+.buttdesign{
+overflow:hidden;
+text-decoration:none!important;
+padding:6px 16px;
+color:#fff;
+background-color: black;
+text-align:center;
+white-space:nowrap}
+.buttdesign:hover{
+box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
+			0 6px 20px 0 rgba(0,0,0,0.19)}
+	
+</style>
+
+<body>
+	<!--side navbar -->
+	<nav class="sidenav h" style="display:none" id="mySidenav">
+	  <a href="javascript:void(0)" class="effect"onclick="click_close()"><button>Close &times;</button></a>
+	  <a class="effect" href="#">Link 1</a>
+	  <a class="effect" href="#">Link 2</a>
+	  <a class="effect" href="#">Link 3</a>
+	  <a class="effect" href="#">Link 4</a>
+	  <a class="effect" href="#">Link 5</a>
+	</nav>
+	<div id="main">
+
+	<div class="top h"><!--keeps navbar on top -->
+
+		<!--horizontal navbar -->
+		<ul class="navbar black" id="myNavbar">
+			<li><span class="xlarge effect" onclick="click_open()" id="openNav">&#9776;</span></li>
+			<li><a class="effect" href="index.html">Home</a></li>
+		</ul>
+	</div><!--End of top navbar-->
+
+
+	<!--first background image -->
+	<div class="bgimg-1"></div>
+
+	<!--second page content -->
+	<div class="page "> 
+				
+<div id="forms">
+
+<?php
+ //$_SESSION['total'] = $_POST['total'];
+
+	
+//$total = $_POST['total'];
+?>
+
+
+<form action="upload.php" method="post" enctype="multipart/form-data">
+			<h3>
+			Phone number
+			<input type="text" name="Names" size="30"><br><br><br>
+
+			Phone number
+			<input type="number" name="number" size="10"><br><br><br>
+
+			Email Address
+			<input type="email" name="email" size="20"><br><br><br>
+			
+			Address
+			
+			<input type="address" name="address" size="30"><br><br><br>
+
+			
+			<input type="hidden" name="SALES" value="<?php echo round(SALES,2); ?>"size="20" />
+
+			<input type="hidden" name="total" value="<?php echo round($total, 2); ?>"size="20" />
+
+
+<br>
+   Select File:  
+    <input type="file" name="fileToUpload" accept="/*" onchange="loadFile(event)"/>  
+<img id="output" height="100" width="100"/>
+<br>
+		<button class="buttdesign"> Submit</button></h3>
+
+	
+</form>
+
+ 
+		</div>
+		
+
+
+	
+		<!--extra spaces -->
+		<br class="clearfloat" />
+		
+		
+		</div><!-- end of page -->
+		
+		
+	<!--Footer end of webpage -->
+	<footer>
+	</footer>
+</div>
+<script>
+// Side navigation
+function click_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function click_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "navbar" + " w3-card-2" + " w3-animate-top" + " color-red";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top color-red", "");
+    }
+}
+
+
+function myFunctions() {
+
+var WindowPrint = window.open('', '', 'left=0,top=0,width=800,height=900,toolbar=0,scrollbars=0,status=0');
+    WindowPrint.document.write("<center><h1>Thank you " +
+	"<?php echo $_SESSION['Name'];?> <br>Your total is $<?php echo $_SESSION['total'];?></h1></center>")
+
+WindowPrint.document.close();
+WindowPrint.focus();
+WindowPrint.print();
+WindowPrint.close();
+}
+</script>
+
+<script>
+  var loadFile = function(event) {
+    var reader = new FileReader();
+    reader.onload = function(){
+      var output = document.getElementById('output');
+      output.src = reader.result;
+    };
+    reader.readAsDataURL(event.target.files[0]);
+  };
+</script>
+</body>
+</html>
