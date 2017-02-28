@@ -100,6 +100,37 @@ box-shadow:0 8px 16px 0 rgba(0,0,0,0.2),
 /*.black,.hover-black:hover{color:#fff!important;background-color:#000!important}*/
 
 
+/* location page colume */
+.column1, .column2, .colume3 {
+	float: left;
+	width: 400; 
+	margin: 10px 80px 10px 80px;
+}
+/* menu page  */
+
+ul.navbar li{float:left}
+ul.navbar li a,.w3-navbar li .w3-input{display:block;padding:8px 16px}
+ul.navbar li a:hover{color:#000;background-color:#ccc}
+ul.navbar{list-style-type:none;margin:0;padding:0;overflow:hidden}
+ul.navbar:hover,
+ul.navbar:first-child,
+ul.navbar-click{position:static}
+
+ul.navbar ul 	{ visibility: hidden; position: absolute; }
+ul.navbar ul li { background-color:#ccc; color: #000; 
+		 float: none; float:left}
+ul.navbar ul{list-style-type:none;margin:0;padding:0;overflow:hidden}								 
+.menucolumn {
+	text-align: center;
+	width: 91%;
+}			
+/* location page colume */
+.mcolumn1, .mcolumn2, .mcolume3 {
+	float: left;
+	width: 25%; 
+	margin: 10px 80px 10px 80px;					  
+}
+.mcolume3{margin-right: 0%;}
 
 
 
