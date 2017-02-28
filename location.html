@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Cafe </title>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="icon" href="images/coffe2.jpg">
+<link rel="stylesheet" href="stylesheet.css">
+</head>
+
+<style>
+	
+</style>
+
+<body>
+	<!--side navbar -->
+	<nav class="sidenav h" style="display:none" id="mySidenav">
+	  <a href="javascript:void(0)" class="effect"onclick="click_close()"><button>Close &times;</button></a>
+	  <a class="effect" href="location.html">Location</a>
+	  <a class="effect" href="menu.html">Link 2</a>
+	  <a class="effect" href="#">Link 3</a>
+	  <a class="effect" href="#">Link 4</a>
+	  <a class="effect" href="#">Link 5</a>
+	</nav>
+
+	<div id="main"><!--This is JS for side navigation -->
+	<div class="top h"><!--keeps navbar on top -->
+
+		<!--horizontal navbar -->
+		<ul class="navbar black" id="myNavbar">
+			<li><span class="xlarge effect" onclick="click_open()" id="openNav">&#9776;</span></li>
+			<li><a class="effect" href="index.html">Home</a></li>
+			<li><a class="effect" href="menu.html">Menu</a></li>
+			<li><a class="effect" href="#link3">xxxxx</a></li>
+			<li><a class="effect" href="location.html">Location</a></li>
+			<li><a class="effect" href="#link5">Contact US</a></li>
+		</ul>
+	</div><!--End of top navbar-->
+
+<!-- Automatic Slideshow Images -->
+	<!--First slideshow picture -->
+	<div class="mySlides ">
+		<img src="images/coffe5.jpg" style="width:100%">
+	</div>
+      	
+	<!--Second slideshow picture -->
+    <div class="mySlides">
+		<img class="bgimg-1" src="images/coffe6.jpg" style="width:100%">
+     </div>    
+	
+	<!--Third slideshow picture -->
+    <div class="mySlides">
+		<img class="bgimg-1" src="images/coffe7.jpg" style="width:100%">
+	</div>
+
+	<!--first page content -->
+	<div class="page">
+		
+		
+		<div class="column1">
+			<h3>Location</h3>
+			<p>6630 raubuer ave s, Seattle, Washinton</p>
+			<img src="images/locationshop.jpg" width="250" height="250" >
+		</div>
+		
+		<div class="column2">
+			<h3>Map</h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4129.705249231865!2d-122.27431255992141!3d47.542591259867535!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x549069ff1cf4fc19%3A0x737111dc08d9fdb1!2s6630+Rainier+Ave+S%2C+Seattle%2C+WA+98118!5e0!3m2!1sen!2sus!4v1488068227834" width="250" height="250" frameborder="0" style="border:0" class="column2"allowfullscreen></iframe>
+		</div>
+		
+		<div class="column3">
+			<h3>Opening Hours</h3>
+			<br />
+			<p>Sunday...................9AM-3PM</p>
+			<p>Monday..................7AM-6PM</p>
+			<p>Tuesday..................7AM-6PM</p>
+			<p>Wednesday.............7AM-6PM</p>
+			<p>Thursday................7AM-6PM</p>
+			<p>Friday....................7AM-6PM</p>
+			<p>Saturday................8AM-6AM</p>
+		
+		</div>
+	</div>
+  
+	<!--first background image -->
+	<div class="bgimg-1" id="link1"></div>
+
+
+<!--second page content -->
+	
+
+	<!--Third page content -->
+	<div class="page">
+		<center><p>Some text some text some text some text...</p></center>
+		<p>Some text some text some text some text..</p>
+		<p>Some text some text some text some text..</p>
+
+		<!-- iframe of facebook-->
+		<iframe src="https://www.facebook.com/plugins/page.php?href=https%3A%2F%2Fwww.facebook.com%2FCafeRio%2F&tabs=timeline&
+		width=340&height=500&small_header=false&adapt_container_width=true&hide_cover=false&show_facepile=true&appId" 
+		width="340" height="500" style="border:none;overflow:hidden" scrolling="no" frameborder="0" allowTransparency="true"></iframe>
+
+		Some text some text some text some text..
+		
+		<!-- iframe of twitter-->
+		<a class="twitter-timeline" data-width="340" data-height="500" href="https://twitter.com/caferio">Tweets by caferio</a>
+		<script async src="//platform.twitter.com/widgets.js" charset="utf-8"></script>
+	</div>
+
+	<!--Footer end of webpage -->
+	<footer>
+		<button class="buttdesign">  <a href="#"> ↑ To the top</a></button>
+	</footer>
+
+<script>
+// Side navigation
+function click_open() {
+  document.getElementById("main").style.marginLeft = "25%";
+  document.getElementById("mySidenav").style.width = "25%";
+  document.getElementById("mySidenav").style.display = "block";
+  document.getElementById("openNav").style.display = 'none';
+}
+function click_close() {
+  document.getElementById("main").style.marginLeft = "0%";
+  document.getElementById("mySidenav").style.display = "none";
+  document.getElementById("openNav").style.display = "inline-block";
+}
+// Change style of navbar on scroll
+window.onscroll = function() {myFunction()};
+function myFunction() {
+    var navbar = document.getElementById("myNavbar");
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+        navbar.className = "navbar" + " w3-card-2" + " w3-animate-top" + " color-red";
+    } else {
+        navbar.className = navbar.className.replace(" w3-card-2 w3-animate-top color-red", "");
+    }
+}
+// Automatic Slideshow - change image every 4 seconds
+var myIndex = 0;
+carousel();
+
+function carousel() {
+    var i;
+    var x = document.getElementsByClassName("mySlides");
+    for (i = 0; i < x.length; i++) {
+       x[i].style.display = "none";  
+    }
+    myIndex++;
+    if (myIndex > x.length) {myIndex = 1}    
+    x[myIndex-1].style.display = "block";  
+    setTimeout(carousel, 3000);    
+}
+</script>
+</div><!--End of id="main"-->
+
+</body>
+</html>
